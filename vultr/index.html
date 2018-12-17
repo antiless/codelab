@@ -1,0 +1,226 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>10分钟快速搭建无限制流量的&#34;VPN&#34;（shadowsocks协议）</title>
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="elements/codelab.html">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <style is="custom-style">
+    body {
+      font-family: "Roboto",sans-serif;
+      background: var(--google-codelab-background, #F8F9FA);
+    }
+  </style>
+  
+</head>
+<body unresolved class="fullbleed">
+
+  <google-codelab title="10分钟快速搭建无限制流量的&#34;VPN&#34;（shadowsocks协议）"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="简介" duration="0">
+        <p>在这个教程里，你会学习到如何注册、使用 VPS 服务器，并利用它来搭建一个几乎无限流量的 VPN 服务。</p>
+<h2 class="checklist">What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>如何获取低价 VPS 服务器</li>
+<li>如何快速搭建私有不限流量的 VPN 服务器</li>
+<li>如何让你的设备快速连接你的私有 VPN</li>
+<li>除了 VPN，你的VPS 服务器还能用来做什么?</li>
+</ul>
+<h2>你需要具备那些能力</h2>
+<ul>
+<li>微信/支付宝/信用卡支付</li>
+<li>拥有 2.5 美元</li>
+<li>基本的命令行使用</li>
+</ul>
+<google-codelab-survey survey-id="vultr-1">
+<h4>你会如何利用本教程</h4>
+<paper-radio-group>
+<paper-radio-button>阅读并完成训练</paper-radio-button>
+<paper-radio-button>仅仅阅读</paper-radio-button>
+</paper-radio-group>
+<h4>你的计算机相关技术能力如何</h4>
+<paper-radio-group>
+<paper-radio-button>非相关专业</paper-radio-button>
+<paper-radio-button>相关专业但不熟悉 Linux</paper-radio-button>
+<paper-radio-button>相关专业并且熟悉 Linux</paper-radio-button>
+<paper-radio-button>Linux 大神</paper-radio-button>
+</paper-radio-group>
+</google-codelab-survey>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="什么是 VPS 服务器" duration="0">
+        <p>VPS服务器（虚拟专用服务器）（&#34;Virtual Private Server&#34;，或简称 &#34;VPS&#34;）是利用虚拟服务器软件(如微软的Virtual Server、VMware的ESX server、SWsoft 的Virtuozzo)在一台物理服务器上创建多个相互隔离的小服务器。</p>
+<p>对你来说相当于一台架设在云上的电脑，拥有一个固定、独立的IP，你可以通过远程连接使用它。</p>
+<h2>你可以用它做什么？</h2>
+<ul>
+<li>架设一个私有 VPN 线路</li>
+<li>搭建个人网站</li>
+<li>数据存储平台</li>
+<li>在线游戏平台</li>
+<li>在线商务平台</li>
+</ul>
+<h2>优势</h2>
+<p>VPS服务器是一种介于传统虚拟主机和独立主机之间的特殊服务器托管技术，它通过特殊的服务器管理技术把一台大型Internet主机虚拟化成多个具有独立IP地址的服务器系统，这些系统无论从性能、安全及扩展性上同独立服务器没有实质性的差别，而费用仅相当于租用独立服务器的1/4或1/5，并且无须额外支出后续的硬件维护管理成本 。</p>
+<p>VPS服务器拥有传统虚拟主机所不具备的系统独立管理权，解决了那些既需要独立主机性能、财力又不够充裕的网站的运营发展问题，无疑是一种比较实惠的选择。</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="服务器选择一: 搬瓦工" duration="0">
+        <p><strong>优点：</strong>便宜！！最低500G流量，年购19.99美刀，使用优惠码还可以再减1刀左右。相当于每月10元。这价格已经比大多数VPN便宜了。<br><strong>支持支付宝交易！支持30天内退款</strong> 一般一个工作日内就能回复，支付宝收到2～3天。<br><strong>一键配置shadowsocks！</strong>如果使用搬瓦工，那后面的内容都不用看了，点下面的链接注册即可。<br>点击注册：<a href="https://bandwagonhost.com/aff.php?aff=39151" target="_blank">https://bandwagonhost.com/</a></p>
+<p>数据中心：美国西雅图、佛罗里达、洛杉矶、荷兰 套餐价格：64MB内存年3.99美元 / 96MB内存年4.99美元/128MB内存年5.99美元/512MB内存年9.99美元 简单介绍：IT7官方旗下的低价VPS主机产品，拥有速度较好的西岸亚利桑那州机房，最低年付仅需3.99美元，我们可以用来学习、工作项目演示，以及需要支持PPP/TUN搭建工具使用需求。拥有4个数据中心，而且可以自由切换IP，更换不同的IP，解决IP被封问题。</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="服务器选择二: Vultr" duration="0">
+        <p>官方网站：<a href="https://www.vultr.com/?ref=7595390" target="_blank">https://www.vultr.com</a></p>
+<p>数据中心：日本、洛杉矶、英国、法国、德国、荷兰、澳大利亚等14个机房<br>套餐价格：KVM 768MB 15GB SSD 1TB月流量 <strong>最低$2.5/月</strong><br>简单介绍：Vultr作为全球最大的游戏主机提供商背景之一，上线之后以高质的性价比、12个数据中心，以及新注册账户赠送5美金的账户使用金优惠促销，吸引广大的用户。作为我们用户，日本、洛杉矶等数据中心速度较好，如果有需要海外其他机房也可以在其12个数据中心中选择到适合自己的。</p>
+<h2>优势</h2>
+<ol type="1">
+<li>使用最低标准服务2.5刀/月</li>
+<li>服务稳定</li>
+<li>现在已全面支持<strong>支付宝/微信付款</strong>，非常方便，也不需要绑定信用卡。</li>
+</ol>
+<h2>注册流程</h2>
+<p>注册页面：<a href="https://www.vultr.com/?ref=7595390" target="_blank">https://www.vultr.com</a></p>
+<p>打开后，在下图所示位置填写你的邮箱地址，并设置密码，填完后点击&#34;Create Account&#34;（创建账户）。</p>
+<p>注意：密码要求至少十位，而且必须包含大写字母、小写字母和数字。</p>
+<p><img src="img/4b5c6b07f49b0815.png"></p>
+<p>然后你的邮箱会收到一封Vultr发来的激活邮件，点击&#34;Verify Your E-mail&#34;（验证邮箱），如下图</p>
+<p><img src="img/6e5a8c9ab03fdead.png"></p>
+<p>激活完成，我们便登录账户，进入后台，干净简洁的全英文界面，侧栏翻译见下图</p>
+<p><img src="img/581d3b8afdd04ec2.png"></p>
+<p>首先我们进入&#34;Billing&#34;（账单），可以看到我们这里支持六类支付方式： 信用卡、PayPal、比特币、支付宝、微信、礼物码。选择一种方式支付即可。</p>
+<p><img src="img/ccac9651a16f3df3.png"></p>
+<h2>新建一个服务器实例</h2>
+<p>点击Vultr后台右侧的蓝色加号，进入购买页面</p>
+<p><img src="img/241fcbe9394d6f9a.png"></p>
+<p>购买VPS，首先选择机房位置，我建议选择如下之一：&#34;New York (NJ)&#34;（纽约）、&#34;Los Angeles&#34;（洛杉矶）、&#34;Singapore&#34;（新加坡）、&#34;Tokyo&#34;（东京）。其中，目前仅纽约机房有2.5美元方案。</p>
+<p><img src="img/7613588b7202af06.png"></p>
+<p>如何选择最适合我的机房？请前往这里<a href="https://www.vultr.com/faq/#downloadspeedtests" target="_blank">下载测试</a>下载文件测试</p>
+<p><img src="img/651c760fe56fd1b3.png"></p>
+<p>选择VPS系统，选择你熟悉的操作系统。如果都不熟悉建议选 Ubuntu 或 CentOS, Windows 因为不在本教程涉及范围内，所以也不建议选择。</p>
+<p><img src="img/d886e2f71bc097bc.png"></p>
+<p>购买需要的配置，注意如果标注 ipv6 可能是仅支持 ipv6，购买时请注意看说明</p>
+<p><img src="img/e6dfa1918ee03eff.png"></p>
+<p>此处有免费的IPv6地址和免费的内网IP可选，付费的自动备份和付费的DDOS保护可选，此页不懂就都不用选</p>
+<p><img src="img/7c7009d7894b175f.png"></p>
+<p>填写主机名，最好是英文的，点击&#34;Deploy Now&#34;（现在部署），即可建立VPS。</p>
+<p><img src="img/a2215b6e386f8709.png"></p>
+<p>在&#34;Servers&#34;（服务器）页面即可见到一台刚创建的VPS</p>
+<p>点击服务器状态右边的&#34;...&#34;，下拉菜单中可以看到：</p>
+<ul>
+<li>Server Details: 服务器详细信息</li>
+<li>View Console: 控制台</li>
+<li>Server Stop: 关机</li>
+<li>Server Restart: 重启</li>
+<li>Server Reinstall: 重装系统</li>
+<li>Server Destroy: 销毁服务器</li>
+</ul>
+<p><img src="img/7bc9b25f64529c35.png"></p>
+<p>VPS管理界面</p>
+<p><img src="img/53c7155656a44cb3.png"></p>
+<p>此时VPS购买就算完成了，如果不用VPS把它删除（销毁）即可（就会停止计费了）。</p>
+<aside class="special"><p>windows平台一般使用Xshell ，前往这里下载<a href="https://www.netsarang.com/products/xsh_overview.html" target="_blank">Xshell 下载</a> 安装时选择家庭/学校 使用，即可免费使用，不必寻找破解版</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="登录服务器" duration="0">
+        <p>注册完，相应的服务商将告知你如何登录服务器。<br>打开你的命令行，进行相应操作以登录服务器。</p>
+<h2>2.2 Python Shadowsocks 搭建服务的工具和协议</h2>
+<p>Shadowsocks 属于socks5 代理，稳定性好，抗干扰能力强。</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="安装 Shadowsocks" duration="0">
+        <p>在CentOS中运行下面两条命令就完成了shadowsocks的安装了：</p>
+<pre><code>yum install python-setuptools &amp;&amp; easy_install pip
+pip install shadowsocks
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="配置文件" duration="0">
+        <p>创建一个配置文件 /etc/shadowsocks.json，写入以下内容：</p>
+<pre><code>{ 
+        &#34;server&#34;:&#34;0.0.0.0&#34;,            #服务器IP地址
+        &#34;server_port&#34;:8388,                 #服务监听端口
+        &#34;local_port&#34;:1080,                  #本地连接端口
+        &#34;password&#34;:&#34;barfoo&#34;,               #加密传输使用到的密码
+        &#34;timeout&#34;:600,                      #连接超时时间
+        &#34;method&#34;:&#34;aes-256-cfb&#34;             #加密算法
+}
+</code></pre>
+<p>使用时请把注释去掉</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="启动、停止" duration="0">
+        <p>运行下面的命令来启动和停止后台服务：</p>
+<pre><code>ssserver -c /etc/shadowsocks.json -d stop
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="配置客户端" duration="0">
+        <ol type="1">
+<li>客户端如何用？</li>
+</ol>
+<p>各个平台使用的客户端都有差异，但是用到的信息就这些：<br>－ 服务器IP: 不是上面的0.0.0.0，是你申请的VPS，会提供一个ip。打开网站，登录，找到它<br>－ 端口(port): 8388<br>－ 协议类型: aes-256-cfb 一般默认就这个，不用换。但还是要看一眼。<br>－ 密码(password): barfoo<br>连接，欢呼。</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="3. 拓展" duration="0">
+        
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-49880327-14', 'auto');
+
+    (function() {
+      var gaCodelab = '';
+      if (gaCodelab) {
+        ga('create', gaCodelab, 'auto', {name: 'codelab'});
+      }
+
+      var gaView;
+      var parts = location.search.substring(1).split('&');
+      for (var i = 0; i < parts.length; i++) {
+        var param = parts[i].split('=');
+        if (param[0] === 'viewga') {
+          gaView = param[1];
+          break;
+        }
+      }
+      if (gaView && gaView !== gaCodelab) {
+        ga('create', gaView, 'auto', {name: 'view'});
+      }
+    })();
+  </script>
+
+</body>
+</html>
