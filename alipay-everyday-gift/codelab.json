@@ -2,6 +2,7 @@
   "environment": "web",
   "source": "alipay.md",
   "format": "html",
+  "prefix": "../resources/",
   "mainga": "UA-49880327-14",
   "updated": "2018-12-17T16:15:31+08:00",
   "id": "alipay-everyday-gift",
