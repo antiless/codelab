@@ -1,0 +1,17 @@
+{
+  "environment": "web",
+  "source": "sohu-news.md",
+  "format": "html",
+  "prefix": "../resources/",
+  "mainga": "UA-49880327-14",
+  "updated": "2018-12-21T00:13:45+08:00",
+  "id": "sohu-news",
+  "duration": 0,
+  "title": "搜狐资讯 APP 多重大礼",
+  "summary": "",
+  "theme": "",
+  "status": null,
+  "category": null,
+  "tags": [],
+  "url": "sohu-news"
+}
