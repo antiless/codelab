@@ -153,15 +153,23 @@ Positive
 注册完，相应的服务商将告知你如何登录服务器。
 打开你的命令行，进行相应操作以登录服务器。
 
-### 2.2 Python Shadowsocks 搭建服务的工具和协议
+### Python Shadowsocks 搭建服务的工具和协议
 Shadowsocks 属于socks5 代理，稳定性好，抗干扰能力强。
 
 ## 安装 Shadowsocks
 
 在CentOS中运行下面两条命令就完成了shadowsocks的安装了：
  
+### centos 系统
 ```
 yum install python-setuptools && easy_install pip
+pip install shadowsocks
+```
+
+### ubuntu 系统
+```
+apt-get install python-pip
+apt-get install python-setuptools m2crypto
 pip install shadowsocks
 ```
 
@@ -179,19 +187,22 @@ pip install shadowsocks
         "method":"aes-256-cfb"             #加密算法
 }
 ```
-> 使用时请把注释去掉
+
+Positive
+: 使用时请把注释去掉
 
 ## 启动、停止
 
 运行下面的命令来启动和停止后台服务：
 
-```ssserver -c /etc/shadowsocks.json -d start
+```
+ssserver -c /etc/shadowsocks.json -d start
 ssserver -c /etc/shadowsocks.json -d stop
 ```
 
 ## 配置客户端
 
-1. 客户端如何用？
+### 客户端如何用？
 
 各个平台使用的客户端都有差异，但是用到的信息就这些：
 － 服务器IP: 不是上面的0.0.0.0，是你申请的VPS，会提供一个ip。打开网站，登录，找到它
@@ -200,5 +211,4 @@ ssserver -c /etc/shadowsocks.json -d stop
 － 密码(password): barfoo
 连接，欢呼。
 
-## 3. 拓展
 
