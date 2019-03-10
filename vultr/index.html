@@ -139,8 +139,28 @@
     
       <google-codelab-step label="登录服务器" duration="0">
         <p>注册完，相应的服务商将告知你如何登录服务器。<br>打开你的命令行，进行相应操作以登录服务器。</p>
-<h2>Python Shadowsocks 搭建服务的工具和协议</h2>
-<p>Shadowsocks 属于socks5 代理，稳定性好，抗干扰能力强。</p>
+<p><strong>1.前期准备工作</strong></p>
+<p>请先参照 <a href="https://vultr.gitbook.io/docs/shou-ba-shou-tu-wen-gou-mai-jiao-cheng" target="_blank"> 《图文购买教程》 </a> ，购买合适的VPS，并获取到当前VPS信息。</p>
+<p><img src="img/9fb8c6c116c93737.png"></p>
+<p>这里我们可以看到当前服务器的IP、ROOT密码（点击箭头的眼睛图标可以看到）。然后我们通过相关的SSH工具管理服务器。</p>
+<p><strong>2.Windows用户登录VPS</strong></p>
+<p>推荐使用XShell，请安装最新版本。XShell官网下载：</p>
+<p><a href="http://www.netsarang.com/products/xsh_overview.html" target="_blank">http://www.netsarang.com/products/xsh_overview.html</a></p>
+<p>下载需要填个邮箱，然后它会把下载链接发到邮箱。按照要求安装成功后运行XShell，新建连接即可。</p>
+<p><img src="img/1bf37233ac107b61.png"></p>
+<p><img src="img/d71e0966f58aef25.png"></p>
+<p><img src="img/dc6301b03db5b61.png"></p>
+<p>这里我们可以登入进来。直接在这个界面输入命令安装系统或者安装其他工具都可以。</p>
+<p><strong>2.Linux用户登录VPS</strong></p>
+<p>打开终端，输入命令：</p>
+<p>ssh -p 端口号 用户名@IP地址</p>
+<p>如：</p>
+<p>ssh -p 25636 root@188.155.133.111</p>
+<p>接着按照提示输入密码即可。</p>
+<p><strong>3.Mac用户登录VPS</strong></p>
+<p>可以打开终端进行登录，方法同Linux用户；也可以安装SSH客户端，如shuttle等。</p>
+<p><strong>4.手机登录VPS</strong></p>
+<p>下载一个SSH客户端，安卓用户可以安装JuiceSSH，iPhone用户可以安装iTerminal等等。</p>
 
 
       </google-codelab-step>
