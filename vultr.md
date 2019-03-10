@@ -52,7 +52,7 @@ VPS服务器拥有传统虚拟主机所不具备的系统独立管理权，解�
 **支持支付宝交易！**
 **支持30天内退款** 一般一个工作日内就能回复，支付宝收到2～3天。
 **一键配置shadowsocks！**如果使用搬瓦工，那后面的内容都不用看了，点下面的链接注册即可。
-点击注册：[https://bandwagonhost.com/](https://bandwagonhost.com/aff.php?aff=39151)
+点击注册：[https://bandwagonhost.com/](http://t.cn/EwLt7Zp)
 
 数据中心：美国西雅图、佛罗里达、洛杉矶、荷兰 套餐价格：64MB内存年3.99美元 / 96MB内存年4.99美元/128MB内存年5.99美元/512MB内存年9.99美元 简单介绍：IT7官方旗下的低价VPS主机产品，拥有速度较好的西岸亚利桑那州机房，最低年付仅需3.99美元，我们可以用来学习、工作项目演示，以及需要支持PPP/TUN搭建工具使用需求。拥有4个数据中心，而且可以自由切换IP，更换不同的IP，解决IP被封问题。
 
@@ -60,7 +60,7 @@ VPS服务器拥有传统虚拟主机所不具备的系统独立管理权，解�
 
 ## 服务器选择二: Vultr
 
-官方网站：[https://www.vultr.com](https://www.vultr.com/?ref=7595390)
+官方网站：[https://www.vultr.com](http://t.cn/EMqNiVm)
 
 数据中心：日本、洛杉矶、英国、法国、德国、荷兰、澳大利亚等14个机房
 套餐价格：KVM 768MB 15GB SSD 1TB月流量 **最低$2.5/月**
@@ -73,7 +73,7 @@ VPS服务器拥有传统虚拟主机所不具备的系统独立管理权，解�
 
 
 ### 注册流程
-注册页面：[https://www.vultr.com](https://www.vultr.com/?ref=7595390)
+注册页面：[https://www.vultr.com](http://t.cn/EMqNiVm)
 
 打开后，在下图所示位置填写你的邮箱地址，并设置密码，填完后点击“Create Account”（创建账户）。
 
@@ -104,7 +104,7 @@ VPS服务器拥有传统虚拟主机所不具备的系统独立管理权，解�
 
 ![](https://upload-images.jianshu.io/upload_images/11407770-09eef3bb64456f0d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)
 
-如何选择最适合我的机房？请前往这里[下载测试](https://www.vultr.com/faq/#downloadspeedtests)下载文件测试
+如何选择最适合我的机房？请前往这里[下载测试](http://t.cn/EfJuLad)下载文件测试
 
 ![](https://upload-images.jianshu.io/upload_images/11407770-ccadb3058814bc71.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)
 
